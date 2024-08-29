@@ -98,7 +98,7 @@ class Pipeline:
         self.stream.prepare(
             prompt=default_prompt,
             negative_prompt="",
-            num_inference_steps=32,
+            num_inference_steps=50,
             guidance_scale=1.2,
         )
 
