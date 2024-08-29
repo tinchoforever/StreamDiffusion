@@ -22,7 +22,7 @@ base_model = "stabilityai/sd-turbo"
 taesd_model = "madebyollin/taesd"
 
 default_prompt = "Professional portrait of journalists at a media event, natural interaction, candid expressions, sophisticated attire, clean background, professional lighting, high detail, editorial style, photorealistic, cinematic composition, sharp focus, 8K UHD, dynamic interaction, vibrant colors, studio setting, masterpiece glare pose, detailed, intricate, full of colour, cinematic lighting, trending on artstation, 8k, hyperrealistic, focused, extreme details, unreal engine 5 cinematic, masterpiece"
-default_negative_prompt = "no black and white, no blurry, no low resolution, no pixelated, no pixel art, no low quality, no low fidelity, no exaggerated expressions, no artificial lighting, no unrealistic poses, no cluttered background, no duplicated elements, no unrealistic colors, no overexposed, no underexposed, no disfigured faces"
+default_negative_prompt = "realistic"
 
 page_content = """<h1 class="text-3xl font-bold">StreamDiffusion</h1>
 <h3 class="text-xl font-bold">Image-to-Image SD-Turbo</h3>
