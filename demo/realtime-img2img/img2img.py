@@ -21,8 +21,8 @@ import math
 base_model = "stabilityai/sd-turbo"
 taesd_model = "madebyollin/taesd"
 
-default_prompt = "Futuristic portrait of journalists at a high-tech event, holograms, modern attire, sleek background, dynamic lighting, ultra-detailed, editorial style, cinematic composition, 8K UHD, vibrant colors"
-default_negative_prompt = ""
+default_prompt = "Futuristic portrait in Buenos Aires, neon-lit skyscrapers, flying cars, holographic billboards. Subject in cyberpunk attire with glowing circuits, AR visors, digital tattoos. Scene features electric blues, neon pinks, metallic surfaces, glitch effects, and holographic projections."
+default_negative_prompt = "No black and white, no blur, no low resolution, no pixel art, no low detail, no outdated technology, no flat colors, no realism."
 
 page_content = """<h1 class="text-3xl font-bold">StreamDiffusion</h1>
 <h3 class="text-xl font-bold">Image-to-Image SD-Turbo</h3>
@@ -98,8 +98,8 @@ class Pipeline:
         self.stream.prepare(
             prompt=default_prompt,
             negative_prompt="",
-            num_inference_steps=50,
-            guidance_scale=1.2,
+            num_inference_steps=30,
+            guidance_scale=8,
         )
 
     def predict(self, params: "Pipeline.InputParams") -> Image.Image:
