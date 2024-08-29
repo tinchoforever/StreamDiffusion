@@ -95,34 +95,18 @@
 </svelte:head>
 
 <main class="container mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4">
-  <Warning bind:message={warningMessage}></Warning>
-  <article class="text-center">
-    {#if pageContent}
-      {@html pageContent}
-    {/if}
-    {#if maxQueueSize > 0}
-      <p class="text-sm">
-        There are <span id="queue_size" class="font-bold">{currentQueueSize}</span>
-        user(s) sharing the same GPU, affecting real-time performance. Maximum queue size is {maxQueueSize}.
-        <a
-          href="https://huggingface.co/spaces/radames/Real-Time-Latent-Consistency-Model?duplicate=true"
-          target="_blank"
-          class="text-blue-500 underline hover:no-underline">Duplicate</a
-        > and run it on your own GPU.
-      </p>
-    {/if}
-  </article>
   {#if pipelineParams}
-    <article class="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
-      {#if isImageMode}
-        <div class="sm:col-start-1">
+  <div class="relative w-screen h-screen overflow-hidden">
+    
+      <div class="absolute inset-0 flex flex-col">
+        <div class="flex-none">
           <VideoInput
             width={Number(pipelineParams.width.default)}
             height={Number(pipelineParams.height.default)}
           ></VideoInput>
         </div>
-      {/if}
-      <div class={isImageMode ? 'sm:col-start-2' : 'col-span-2'}>
+
+      <div class="flex-1 flex justify-center items-center">
         <ImagePlayer />
       </div>
       <div class="sm:col-span-2">
@@ -135,7 +119,16 @@
         </Button>
         <PipelineOptions {pipelineParams}></PipelineOptions>
       </div>
-    </article>
+   
+    </div>
+
+   
+    <img
+      src="/genoshansw.png"
+      alt="Frame"
+      class="absolute inset-0 w-full h-full pointer-events-none"
+    />
+  </div>
   {:else}
     <!-- loading -->
     <div class="flex items-center justify-center gap-3 py-48 text-2xl">
