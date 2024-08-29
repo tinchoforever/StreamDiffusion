@@ -1,7 +1,7 @@
 # StreamDiffusion
 
 [English](./README.md) | [日本語](./README-ja.md) | [한국어](./README-ko.md)
-
+GENOSHA
 <p align="center">
   <img src="./assets/demo_07.gif" width=90%>
   <img src="./assets/demo_09.gif" width=90%>
