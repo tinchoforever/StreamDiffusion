@@ -21,7 +21,7 @@ import math
 base_model = "stabilityai/sd-turbo"
 taesd_model = "madebyollin/taesd"
 
-default_prompt = "Professional portrait of journalists at a media event, natural interaction, candid expressions, sophisticated attire, clean background, professional lighting, high detail, editorial style, photorealistic, cinematic composition, sharp focus, 8K UHD, dynamic interaction, vibrant colors, studio setting, masterpiece glare pose, detailed, intricate, full of colour, cinematic lighting, trending on artstation, 8k, hyperrealistic, focused, extreme details, unreal engine 5 cinematic, masterpiece"
+default_prompt = "Futuristic portrait of journalists at a high-tech event, holograms, modern attire, sleek background, dynamic lighting, ultra-detailed, editorial style, cinematic composition, 8K UHD, vibrant colors"
 default_negative_prompt = "realistic"
 
 page_content = """<h1 class="text-3xl font-bold">StreamDiffusion</h1>
