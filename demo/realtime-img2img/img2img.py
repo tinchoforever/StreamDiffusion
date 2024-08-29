@@ -22,7 +22,7 @@ base_model = "stabilityai/sd-turbo"
 taesd_model = "madebyollin/taesd"
 
 default_prompt = "Futuristic portrait of journalists at a high-tech event, holograms, modern attire, sleek background, dynamic lighting, ultra-detailed, editorial style, cinematic composition, 8K UHD, vibrant colors"
-default_negative_prompt = "realistic"
+default_negative_prompt = ""
 
 page_content = """<h1 class="text-3xl font-bold">StreamDiffusion</h1>
 <h3 class="text-xl font-bold">Image-to-Image SD-Turbo</h3>
@@ -97,8 +97,8 @@ class Pipeline:
         self.last_prompt = default_prompt
         self.stream.prepare(
             prompt=default_prompt,
-            negative_prompt=default_negative_prompt,
-            num_inference_steps=50,
+            negative_prompt="",
+            num_inference_steps=32,
             guidance_scale=1.2,
         )
 
